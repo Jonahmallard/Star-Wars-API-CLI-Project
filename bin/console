@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../sw_cli/sw_cli.rb'
+
+Pry.start
