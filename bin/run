@@ -2,4 +2,4 @@
 
 require_relative '../sw_cli/sw_cli.rb'
 
-#Cli.new.start
+Cli.new.run
