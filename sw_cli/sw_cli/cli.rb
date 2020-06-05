@@ -27,7 +27,7 @@ class Cli
       sleep 1
       puts "Producer: #{film.producer}"
       sleep 1 
-      puts "Release Date: #{film.release_date}/n/n"
+      puts "Release Date: #{film.release_date}"
       sleep 1 
       puts "#{film.opening_crawl}"
     end
@@ -48,14 +48,19 @@ class Cli
       puts "Welcome to Star Wars CLI!"
     end
 
+    def print_goodbye
+      puts "Goodbye!"
+    end
+
     def selection 
       gets.chomp
     end
 
-    def valid_id?(id)
+    def valid_id?(episode_id)
       episode_id = episode_id.to_i
       if episode_id < 1 || episode_id > Film.all.size
         print_error
+        sleep 0.5
         main
       end
       episode_id
