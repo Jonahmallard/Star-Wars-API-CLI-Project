@@ -22,14 +22,15 @@ class Cli
 
     def print_details(film)
       puts "Title: #{film.title}"
-      sleep 1
+      sleep 0.5
       puts "Director: #{film.director}"
-      sleep 1
+      sleep 0.5
       puts "Producer: #{film.producer}"
-      sleep 1 
+      sleep 0.5
       puts "Release Date: #{film.release_date}"
-      sleep 1 
+      sleep 0.5
       puts "#{film.opening_crawl}"
+      sleep 1
     end
 
     def print_continue
@@ -45,7 +46,7 @@ class Cli
     end
 
     def print_welcome 
-      puts "Welcome to Star Wars CLI!"
+      puts "Welcome to My Star Wars CLI!"
     end
 
     def print_goodbye
@@ -68,6 +69,7 @@ class Cli
 
     def continue?(choice)
         if choice == "y"
+            sleep 1
             main
         else 
             print_goodbye
