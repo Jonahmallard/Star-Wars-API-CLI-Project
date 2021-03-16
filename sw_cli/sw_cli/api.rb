@@ -16,8 +16,8 @@ class Api
    def self.get_film_details_by_number(episode_id)
      puts "Loading..."
      selected_film = Film.find_by_id(episode_id)
-     response = RestClient.get(selected_film.url)
-     data = JSON.parse(response.body)
+     res = RestClient.get(selected_film.url)
+     data = JSON.parse(res.body)
      opening_crawl = data["opening_crawl"]
      director = data["director"]
      producer = data["producer"]
